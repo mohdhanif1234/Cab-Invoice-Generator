@@ -38,11 +38,6 @@ namespace CabInvoiceGenerator
             }
         }
 
-        public InvoiceGenerator(object nORMAL)
-        {
-            this.nORMAL = nORMAL;
-        }
-
         //Method for calculating fare
         public double CalculateFare(double distance, int time)
         {
