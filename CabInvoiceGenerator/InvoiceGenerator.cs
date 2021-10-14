@@ -12,7 +12,6 @@ namespace CabInvoiceGenerator
         public double MINIMUM_COST_PER_KM;
         public int COST_PER_TIME;
         public double MINIMUM_FARE;
-        private object nORMAL;
 
         public InvoiceGenerator(RideType rideType)
         {

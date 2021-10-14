@@ -65,5 +65,18 @@ namespace MSTestForCabInvoiceGenerator
             InvoiceSummary expected = invoice.CalculateFare(rides);
             Assert.AreEqual(expected.totalFare, summary.totalFare);
         }
+        //UC-5: Given total distance and time should return total fare of the journey - PREMIUM SERVICE 
+        [TestMethod]
+        [TestCategory("Fare")]
+        public void GivenDistanceAndTimeShouldReturnPremiumFare()
+        {
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator(RideType.PREMIUM);
+            double distance = 5.0;
+            int time = 10;
+            // Calculating Fare
+            double fare = invoiceGenerator.CalculateFare(distance, time);
+            double expected = 95;
+            Assert.AreEqual(expected, fare);
+        }
     }
 }
